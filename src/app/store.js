@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import teamsReducer from '../features/teamStore/teamStoreSlice'
+
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    teams: teamsReducer,
   },
 });
