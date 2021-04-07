@@ -32,13 +32,18 @@ export default function TeamInformationSection(props) {
             }
         }
     }
+
+    function clearStyles(e){
+        document.getElementById('radioContainer').classList.remove('invalidRadio')
+    }
+
     return (
         <section className={styles.firstSection}>
             <h3>Team Information</h3>
             <form noValidate>
                 <div className={styles.col}>
                     <label>
-                        <h6 isinvalid={invalid.teamName.toString()}>Team name</h6>
+                        <h6 isinvalid={invalid.teamName.toString()}>Team name *</h6>
                         <input
                             type='text'
                             autoComplete='team name'
@@ -67,13 +72,14 @@ export default function TeamInformationSection(props) {
                 <div className={styles.col}>
                     <div>
                         <label>
-                            <h6 isinvalid={invalid.teamWebsite.toString()}>Team website</h6>
+                            <h6 isinvalid={invalid.teamWebsite.toString()}>Team website *</h6>
                             <input
                                 type='URL'
                                 autoComplete='team website'
                                 placeholder='YourTeamWebsite.com'
                                 aria-label='Team website'
                                 name='teamWebsite'
+                                id='teamWebsiteInput'
                                 onBlur={validateInput}
                                 value={teamWebsite}
                                 onChange={(e) => setTeamWebsite(e.target.value)}
@@ -84,8 +90,8 @@ export default function TeamInformationSection(props) {
                         </label>
                     </div>
                     <div>
-                        <div>
-                            <h6 isinvalid={invalid.teamType.toString()}>Team type</h6>
+                        <div id='radioContainer'>
+                            <h6 isinvalid={invalid.teamType.toString()}>Team type *</h6>
                             <div className={styles.radioContainer}>
                                 <label className={styles.radio}>
                                     <input
@@ -95,6 +101,7 @@ export default function TeamInformationSection(props) {
                                         id='realOp'
                                         value='Real'
                                         checked={(teamType === 'Real') ? true : false}
+                                        onBlur={clearStyles}
                                         onChange={(e) => setTeamType(e.target.value)}
                                     />
                                     <span className={styles.designRadio}></span>
@@ -107,6 +114,7 @@ export default function TeamInformationSection(props) {
                                         name='teamType'
                                         id='fantasyOp'
                                         value='Fantasy'
+                                        onBlur={clearStyles}
                                         checked={(teamType === 'Fantasy') ? true : false}
                                         onChange={(e) => setTeamType(e.target.value)}
                                     />

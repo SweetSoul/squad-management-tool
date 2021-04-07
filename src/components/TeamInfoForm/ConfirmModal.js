@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/TeamInfoForm/Modal.module.css'
 
 
-export default function ConfirmModal({modalShow, setModalShow, history}){
+export default function ConfirmModal({ modalShow, setModalShow, history }) {
     return (
         <div className={(modalShow) ? `${styles.modalContainer} ${styles.showModalContainer}` : styles.modalContainer}>
             <div className={(modalShow) ? `${styles.modal} ${styles.showModal}` : styles.modal}>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import styles from '../../styles/TeamInfoForm/TeamInfoForm.module.css'
-import { nanoid } from '@reduxjs/toolkit'
 
 import ConfirmModal from './ConfirmModal'
 import TeamInformationSection from './TeamInformationSection'
@@ -23,7 +22,7 @@ export default function TeamInfo({ id, teamStore, playerStore, teamStoreStatus, 
     const [modalShow, setModalShow] = useState(false)
 
     let dispatch = useDispatch()
-    let teamId = (id !== undefined) ? id : nanoid()
+    let teamId = (id !== undefined) ? id : Math.floor(Math.random() * (999999 - 600)) + 600
     let history = useHistory()
 
 
@@ -38,8 +37,17 @@ export default function TeamInfo({ id, teamStore, playerStore, teamStoreStatus, 
     }
 
     function handleSave() {
-        if (teamName !== '' || teamWebsite !== '' || teamType !== '') {
-            if (currentTeam !== null) {
+        if(teamType === ''){
+            document.getElementById('realOp').focus()
+            return document.getElementById('radioContainer').classList.add('invalidRadio')
+        }
+        if (teamName !== '' && teamWebsite !== '' && teamType !== '') {
+            let expression = /([--:\w?@%&+~#=]*\.[a-z]{2,4}\/{0,2})((?:[?&](?:\w+)=(?:\w+))+|[--:\w?@%&+~#=]+)?/gi;
+            let regex = new RegExp(expression);
+            if(!teamWebsite.match(regex)){
+                return document.getElementById('teamWebsiteInput').focus()
+            }
+            if (currentTeam !== null && currentTeam !== undefined) {
                 dispatch(updateTeam({
                     team_id: teamId,
                     name: teamName,
@@ -71,7 +79,7 @@ export default function TeamInfo({ id, teamStore, playerStore, teamStoreStatus, 
                 })
             }
             setUnsaved(false)
-
+            return history.push('/')
         }
     }
 

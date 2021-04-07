@@ -219,18 +219,18 @@ h6 {
     transition: font-size 300ms;
 }
 
-input[isinvalid]+.missingField{
+input[isinvalid="true"]+.missingField{
     font-size: 15px;
 }
 
-input[isinvalidurl]~.errorUrl{
+input[isinvalidurl="true"]~.errorUrl{
     font-size: 15px;
 }
 
-input[isinvalid], input[isinvalidurl]{
+input[isinvalid="true"], input[isinvalidurl="true"]{
     border-color: crimson;
 }
 
-h6[isInvalid=true]{
+h6[isInvalid="true"]{
     color: crimson;
 }

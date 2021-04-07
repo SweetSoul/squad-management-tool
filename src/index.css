@@ -18,3 +18,11 @@ code {
   margin: 0;
   padding: 0;
 }
+
+.invalidRadio{
+  border: 1px solid crimson!important;
+}
+
+.invalidRadio h6{
+  color: crimson!important;
+}

@@ -106,6 +106,7 @@ tbody tr td{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left:auto;
 }
 
 .btnList button{
