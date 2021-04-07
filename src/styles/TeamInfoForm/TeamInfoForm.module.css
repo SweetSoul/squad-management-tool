@@ -1,0 +1,108 @@
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F3F7;
+    width: 100vw;
+    min-height: calc(90vh - 20px);
+    padding: 50px 0;
+    margin: 0;
+}
+
+.card {
+    max-width: 95vw;
+    width: 95vw;
+    min-height: 90%;
+    background: white;
+    border-radius: 15px;
+}
+
+.cardTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin: 30px 30px 0;
+}
+
+.cardTitle h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #552C8A;
+}
+
+.card hr {
+    height: 2px;
+    width: 100%;
+    margin: 20px 0 40px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .1);
+    border: none;
+}
+
+.backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(#A9397A, #803382);
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 15px 0 #7f3382ad, 0 0 15px 0 #a9397aab;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 30px;
+    transition: transform 300ms;
+}
+
+.backBtn:hover {
+    transform: scale(1.1);
+}
+
+.backBtn svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: transform 300ms;
+    transform: translateX(-5px)
+}
+
+.backBtn:hover svg {
+    transform: translateX(-15px)
+}
+
+.saveContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 100px;
+}
+
+.saveBtn{
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    background: linear-gradient(#A9397A, #803382);
+    border-radius: 50px;
+    border:none;
+    padding: 15px 7em;
+    color: white;
+    box-shadow: 0 0 15px 0 #7f3382ad, 0 0 15px 0 #a9397aab;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 500ms, background 500ms, color 500ms, box-shadow 300ms;
+}
+
+.saveBtn:not(:disabled):hover{
+    transform: scale(1.1);
+}
+
+.saveBtn:disabled{
+    background: gray;
+    color: #303030;
+    box-shadow: 0 0 15px 0 #202020ad, 0 0 15px 0 #505050ab;
+    cursor: default;
+}

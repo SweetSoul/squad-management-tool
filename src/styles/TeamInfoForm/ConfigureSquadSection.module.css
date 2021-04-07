@@ -1,0 +1,379 @@
+/* SECOND SECTION RULES */
+.secondSection {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.secondSection h3 {
+    color: #8D8D8D;
+    text-transform: uppercase;
+    font-weight: 600;
+    flex: 1 1 auto;
+    margin-bottom: 50px;
+}
+
+.colsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 95%;
+}
+
+.col {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formationSelect {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 75%;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.formationSelect select {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #303030;
+    transition: border 300ms;
+    height: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.labelSearch {
+    display: flex;
+    flex-flow: column;
+    width: 75%;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.labelSearch input {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #303030;
+    transition: border 300ms;
+    height: 50px;
+}
+
+.labelSearch input:focus-visible{
+    outline: none;
+    border-color: #303030;
+}
+
+.playerCardContainer{
+    margin-top: 20px;
+    width: 75%;
+}
+
+.playerCard{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    max-width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    background: linear-gradient(#FDFDFD, #E8E8E8);
+    border: 3px dashed #E4E4E4;
+    border-radius: 5px;
+    cursor: grab;
+    outline: none;
+}
+
+.playerCard:focus-visible{
+    cursor: grabbing;
+}
+
+.playerCard > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.playerCard h4{
+    font-weight: 600;
+    color: #343434;
+    line-height: 25px;
+}
+
+.playerCard span{
+    font-weight: 500;
+    color: #C60A46;
+}
+
+
+/* Pagination */
+.paginationContainer{
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+}
+
+.paginationContainer button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+}
+
+.paginationContainer>div>div{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.paginationContainer button:nth-child(3) svg,
+.paginationContainer button:nth-child(4) svg{
+    width: 25px;
+    height: 25px;
+    padding: 5px 0;
+    fill: #505050;
+}
+
+.paginationContainer button:nth-child(2) svg,
+.paginationContainer button:last-child svg{
+    width: 35px;
+    height: 35px;
+    fill: #505050;
+}
+
+.paginationContainer button:hover{
+    cursor: pointer;
+}
+
+.paginationContainer button:hover:not(:disabled) svg{
+    fill: #B13D7C;
+}
+
+.paginationContainer button:disabled svg{
+    fill: #ccc;
+}
+
+.paginationContainer button:disabled{
+    cursor:default;
+}
+
+/* Soccer field styles */
+
+.fieldContainer{
+    flex: 1 1 auto;
+    width: calc(75% - 20px);
+    height: 900px;
+    background: linear-gradient(180deg,#B03B7C, #732B81);
+    background-image: url('https://sweetsoul.sirv.com/Images/venturus/Soccer_Field.jpg');  
+    background-size: cover; 
+    background-position: bottom;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.playerPosition{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: flex-basis 800ms ease-in-out;
+}
+
+/* Formation 3-2-2-3 */
+.fieldContainer[formation="3-2-2-3"] .playerPosition:nth-child(-n+3),
+.fieldContainer[formation="3-2-2-3"] .playerPosition:nth-last-child(-n+4){
+    flex-basis: 30%;
+}
+
+.fieldContainer[formation="3-2-2-3"] .playerPosition:nth-child(4),
+.fieldContainer[formation="3-2-2-3"] .playerPosition:nth-child(5),
+.fieldContainer[formation="3-2-2-3"] .playerPosition:nth-child(6),
+.fieldContainer[formation="3-2-2-3"] .playerPosition:nth-child(7){
+    flex-basis: 50%;
+}
+
+/* Formation 3-2-3-2 */
+.fieldContainer[formation="3-2-3-2"] .playerPosition:nth-child(-n+5),
+.fieldContainer[formation="3-2-3-2"] .playerPosition:nth-last-child(-n+4){
+    flex-basis: 30%;
+}
+
+.fieldContainer[formation="3-2-3-2"] .playerPosition:nth-child(1),
+.fieldContainer[formation="3-2-3-2"] .playerPosition:nth-child(2),
+.fieldContainer[formation="3-2-3-2"] .playerPosition:nth-child(6),
+.fieldContainer[formation="3-2-3-2"] .playerPosition:nth-child(7){
+    flex-basis: 50%;
+}
+
+/* Formation 3-4-3 */
+.fieldContainer[formation="3-4-3"] .playerPosition:nth-child(-n+3),
+.fieldContainer[formation="3-4-3"] .playerPosition:nth-last-child(-n+4){
+    flex-basis: 30%;
+}
+
+.fieldContainer[formation="3-4-3"] .playerPosition:nth-child(4),
+.fieldContainer[formation="3-4-3"] .playerPosition:nth-child(5),
+.fieldContainer[formation="3-4-3"] .playerPosition:nth-child(6),
+.fieldContainer[formation="3-4-3"] .playerPosition:nth-child(7){
+    flex-basis: 25%;
+}
+
+
+/* Formation 3-5-2 */
+
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-child(-n+2){
+    flex-basis: 50%;
+}
+
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-last-child(-n+4){
+    flex-basis: 30%;
+}
+
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-child(3),
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-child(4),
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-child(5),
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-child(6),
+.fieldContainer[formation="3-5-2"] .playerPosition:nth-child(7){
+    flex-basis: 20%;
+}
+
+/* Formation 4-2-3-1 */
+
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-child(-n+1){
+    flex-basis: 100%;
+}
+
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-last-child(-n+5){
+    flex-basis: 25%;
+}
+
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-child(2),
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-child(3),
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-child(4){
+    flex-basis: 30%;
+}
+
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-child(5),
+.fieldContainer[formation="4-2-3-1"] .playerPosition:nth-child(6){
+    flex-basis: 50%;
+}
+
+/* Formation 4-3-1-2 */
+
+.fieldContainer[formation="4-3-1-2"] .playerPosition:nth-child(-n+2){
+    flex-basis: 50%;
+}
+
+.fieldContainer[formation="4-3-1-2"] .playerPosition:nth-last-child(-n+5){
+    flex-basis: 25%;
+}
+
+.fieldContainer[formation="4-3-1-2"] .playerPosition:nth-child(3){
+    flex-basis: 100%;
+}
+
+.fieldContainer[formation="4-3-1-2"] .playerPosition:nth-child(4),
+.fieldContainer[formation="4-3-1-2"] .playerPosition:nth-child(5),
+.fieldContainer[formation="4-3-1-2"] .playerPosition:nth-child(6){
+    flex-basis: 30%;
+}
+
+/* Formation 4-3-3 */
+
+.fieldContainer[formation="4-3-3"] .playerPosition:nth-child(-n+3){
+    flex-basis: 30%;
+}
+
+.fieldContainer[formation="4-3-3"] .playerPosition:nth-last-child(-n+5){
+    flex-basis: 25%;
+}
+
+.fieldContainer[formation="4-3-3"] .playerPosition:nth-child(4),
+.fieldContainer[formation="4-3-3"] .playerPosition:nth-child(5),
+.fieldContainer[formation="4-3-3"] .playerPosition:nth-child(6){
+    flex-basis: 30%;
+}
+
+/* Formation 4-4-2 */
+
+.fieldContainer[formation="4-4-2"] .playerPosition:nth-child(-n+2){
+    flex-basis: 50%;
+}
+
+.fieldContainer[formation="4-4-2"] .playerPosition:nth-last-child(-n+9){
+    flex-basis: 25%;
+}
+
+
+/* Formation 4-5-1 */
+
+.fieldContainer[formation="4-5-1"] .playerPosition:nth-child(-n+1){
+    flex-basis: 100%;
+}
+
+.fieldContainer[formation="4-5-1"] .playerPosition:nth-last-child(-n+10){
+    flex-basis: 20%;
+}
+
+.fieldContainer[formation="4-5-1"] .playerPosition:nth-last-child(-n+5){
+    flex-basis: 25%;
+}
+
+/* Formation 5-4-1 */
+
+.fieldContainer[formation="5-4-1"] .playerPosition:nth-child(-n+1){
+    flex-basis: 100%;
+}
+
+.fieldContainer[formation="5-4-1"] .playerPosition:nth-last-child(-n+10){
+    flex-basis: 25%;
+}
+
+.fieldContainer[formation="5-4-1"] .playerPosition:nth-last-child(-n+6){
+    flex-basis: 20%;
+}
+
+.playerPosition[position="gk"]{
+    flex-basis: 100%!important;
+    margin-bottom: -20px;
+}
+
+.playerPosition > div{
+    height: 100px;
+    width: 100px;
+    font-weight: 200;
+    font-size: 35px;
+    color: rgba(255,255,255,.7);
+    border-radius: 100px;
+    border: 1px dashed rgba(255,255,255,.3);
+    background-color: rgba(255,255,255,.5);
+    background-size: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

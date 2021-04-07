@@ -1,0 +1,236 @@
+.firstSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.firstSection h3{
+    color: #8D8D8D;
+    text-transform: uppercase;
+    font-weight: 600;
+    flex: 1 1 auto;
+    margin-bottom: 50px;
+}
+
+.firstSection form {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 40vh;
+}
+
+.col {
+    display: flex;
+    flex: 1 1 50%;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.col > *{
+    width: 75%;
+}
+
+.col>label:last-child,
+.col>div:last-child {
+    flex: 1 1 auto;
+}
+
+.col>div:last-child {
+    display: flex;
+    flex-flow: column;
+    padding-top: 15px;
+}
+
+.col>label:first-child,
+.col>div:first-child {
+    flex: 0 1 auto;
+    margin-bottom: 50px;
+}
+
+.col label {
+    display: flex;
+    flex-flow: column;
+}
+
+.tagifyContainer{
+    height: 100%;
+}
+
+.tagifyContainer > div{
+    flex: 1 1 auto;
+}
+
+h6 {
+    font-weight: 600;
+    color: #4A4A4A;
+    font-size: 18px;
+}
+
+.col label:first-child h6 {
+    margin-top: 0;
+}
+
+.col input {
+    height: 50px;
+}
+
+.col input:focus-visible{
+    outline: none;
+    border-color: #303030;
+}
+
+.col input,
+.col textarea {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: 400;
+    color: #303030;
+    transition: border 300ms;
+}
+
+.col textarea {
+    padding-top: 15px;
+    flex: 1 1 auto;
+}
+
+
+/*  RADIO BUTTONS  */
+
+.radioContainer{
+    display: flex;
+    margin-top: 10px;
+}
+
+.col .radio {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    margin: 0 30px 30px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio input {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.designRadio {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #aaa;
+    border-radius: 100%;
+    margin-right: 16px;
+    position: relative;
+}
+
+.designRadio::before,
+.designRadio::after {
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center center;
+}
+
+.designRadio:before {
+    background: #A83A7D;
+    ;
+    opacity: 0;
+    transition: .3s;
+}
+
+.designRadio::after {
+    background: #A83A7D;
+    opacity: .4;
+    transition: .6s;
+}
+
+.radio input:checked+.designRadio::before {
+    opacity: 1;
+    transform: scale(.6);
+}
+
+
+/* other states */
+
+.radio input:hover+.designRadio,
+.radio input:focus+.designRadio {
+    border: 1px solid #A83A7D;
+}
+
+.radio input:hover+.designRadio:before,
+.radio input:focus+.designRadio:before {
+    background: #A83A7D;
+}
+
+.radio input~.radioTxt{
+    color: #999;
+}
+
+.radio input:hover~.radioTxt,
+.radio input:checked~.radioTxt {
+    color: #A83A7D;
+}
+ 
+.radio input:checked+.designRadio::after {
+    opacity: .1;
+    transform: scale(1.5);
+}
+
+.radio input+label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #aaa;
+}
+
+
+/* INVALIDATED FIELDS */
+
+.radioContainer .missingField{
+    margin-left: 20px;
+}
+
+.missingField, .errorUrl{
+    font-size: 0;
+    color: crimson;
+    padding-left: 10px;
+    padding-top: 5px;
+    transition: font-size 300ms;
+}
+
+input[isinvalid]+.missingField{
+    font-size: 15px;
+}
+
+input[isinvalidurl]~.errorUrl{
+    font-size: 15px;
+}
+
+input[isinvalid], input[isinvalidurl]{
+    border-color: crimson;
+}
+
+h6[isInvalid=true]{
+    color: crimson;
+}

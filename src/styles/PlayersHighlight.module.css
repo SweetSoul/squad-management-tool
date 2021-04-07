@@ -1,0 +1,105 @@
+.phCardContainer {
+    background: linear-gradient(#BB3D7B, #642E87);
+    border-radius: 20px;
+    max-width: 100%;
+    min-height: calc(50% - 15px);
+    margin-bottom: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phCol {
+    flex: 0 1 50%;
+    padding: 0 30px;
+    min-height: 100%;
+    border-left: 2px solid rgba(255, 255, 255, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.phTitle h3 {
+    font-weight: 600;
+    color: #f4f4f4;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.phBordered {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.aniBorder {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 2.5px;
+    background-clip: content-box;
+    border: 3px dashed rgba(255, 255, 255, .5);
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.phImgContainer1 img,
+.phImgContainer2 img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 10px solid white;
+    position: absolute;
+    top: 105px;
+    left: 105px;
+    transform: translate(-50%, -50%);
+}
+
+.phImgContainer1 img {
+    border-color: #8E0876;
+}
+
+.phImgContainer2 img {
+    border-color: #A40862;
+}
+
+
+.relativeData {
+    position: absolute;
+    bottom: 80%;
+    right: -25%;
+    width: 50px;
+    font-size: 20px;
+}
+
+.relativeData hr {
+    height: 2px;
+    background-color: white;
+    border: none;
+}
+
+.middleCircleContainer {
+    position: absolute;
+    align-self: center;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middleCircle {
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}

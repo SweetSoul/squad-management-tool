@@ -1,0 +1,260 @@
+.table{
+    width: 100%;
+    padding: 0 15px 0 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #404040;
+}
+
+tr td:first-child { 
+    border-radius: 5px 0 0 5px;    
+}
+tr td:last-child { 
+    border-radius: 0 5px 5px 0;    
+}
+
+tr:hover td{
+    background-color: #F7EEF7;
+}
+
+tbody:before {
+    content:'-';
+    display:block;
+    line-height:20px;
+    font-size: 0;
+}
+
+tbody tr td{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+
+.tableHead{
+    text-align: left;
+    text-indent: 15px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.tableHead th:first-child{
+    border-right: 1px solid rgba(0,0,0,.1);
+    max-width: 20%;
+    overflow: hidden;
+}
+
+.tableHead button{
+    background: none;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    border:none;
+    width: 100%;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.tableHead button svg{
+    padding: 0;
+    margin: 0;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    fill: #aaa;
+}
+
+.tableHead button div{
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+}
+
+.dataRow{
+    overflow: hidden;
+    border-radius: 10px;
+    text-indent: 15px;
+    height: 60px;
+}
+
+.dataRow:hover, .dataRow:hover div{
+    color: #B13D7C;
+}
+
+.dataRow td{
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dataRow td:nth-child(1){
+    width: 20%;
+}
+
+.descContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-indent: 15px;
+}
+
+.btnList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnList button{
+    background: none;
+    border: none;
+    display: none;
+    padding: 1px 2px;
+}
+
+.dataRow:hover .btnList button{
+    display: inline;
+}
+
+.btnList svg{
+    width: 15px;
+    height: 15px;
+}
+
+/* popover */
+div[data-popover] {
+    display: inline;
+    position: relative;
+}
+div[data-popover] > button:focus {
+    outline: none;
+}
+div[data-popover] > button {
+    list-style: none;
+    cursor: pointer;
+}
+
+div[data-popover]:last-child > button {
+    margin-right: 15px;
+}
+
+div[data-popover] > button:hover + * {
+    position: absolute;
+    color: white;
+    display: inline;
+    font-size: 14px;
+    z-index: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #303030;
+    text-indent: 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+div[data-popover] > button:hover + *:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 55%;
+    width: 0;
+    border-top: 5px solid #303030;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+div[data-popover] > button + * > *{
+    margin: 0;
+}
+
+div[data-popover] > * + * {
+    /* hide detail elements that would ruin the popover */
+    display: none;
+}
+
+div[data-popover] > button + * {
+    bottom: calc(0.5rem + 100%);
+    right: 50%;
+    transform: translateX(50%);
+}
+
+
+/* Style sorting svgs from table Head */
+.tableHead .descending svg:last-child{
+    fill: #303030;
+}
+
+.tableHead  .ascending svg:first-child{
+    fill: #303030;
+}
+
+
+/* TABLE FOOTER */
+
+tfoot tr:hover td{
+    background-color: white;
+}
+
+tfoot tr, tfoot tr td:last-child{
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.footerContainer{
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+}
+
+.footerContainer button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+}
+
+.footerContainer>div>div{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.footerContainer button:nth-child(3) svg,
+.footerContainer button:nth-child(4) svg{
+    width: 25px;
+    height: 25px;
+    padding: 5px 0;
+    fill: #505050;
+}
+
+.footerContainer button:nth-child(2) svg,
+.footerContainer button:last-child svg{
+    width: 35px;
+    height: 35px;
+    fill: #505050;
+}
+
+.footerContainer button:hover{
+    cursor: pointer;
+}
+
+.footerContainer button:hover:not(:disabled) svg{
+    fill: #B13D7C;
+}
+
+.footerContainer button:disabled svg{
+    fill: #ccc;
+}
+
+.footerContainer button:disabled{
+    cursor:default;
+}
+
