@@ -234,3 +234,50 @@ input[isinvalid="true"], input[isinvalidurl="true"]{
 h6[isInvalid="true"]{
     color: crimson;
 }
+
+@media (max-width: 600px) {    
+    .firstSection form {
+        flex: 1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .col {
+        flex: 1 1 100%;
+    }
+    
+    .col > *{
+        width: 95%;
+    }
+    .col>div:last-child {
+        padding-top: 15px;
+    }
+    
+    .col>label:first-child,
+    .col>div:first-child {
+        margin-bottom: 20px;
+    }
+    .tagifyContainer{
+        min-height: 20vh;
+    }
+    h6 {
+        font-size: 15px;
+    }
+    .col label:first-child h6 {
+        margin-top: 20px;
+    }
+    .col input {
+        height: 50px;
+    }
+    .col input,
+    .col textarea {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .col textarea {
+        padding-top: 10px;
+        flex: 1 1 auto;
+    }
+}

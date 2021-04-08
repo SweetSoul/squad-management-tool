@@ -73,7 +73,7 @@
     transform: translateX(-15px)
 }
 
-.saveContainer{
+.saveContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,13 +81,13 @@
     height: 100px;
 }
 
-.saveBtn{
+.saveBtn {
     display: block;
     text-align: center;
     font-weight: 600;
     background: linear-gradient(#A9397A, #803382);
     border-radius: 50px;
-    border:none;
+    border: none;
     padding: 15px 7em;
     color: white;
     box-shadow: 0 0 15px 0 #7f3382ad, 0 0 15px 0 #a9397aab;
@@ -96,13 +96,64 @@
     transition: transform 500ms, background 500ms, color 500ms, box-shadow 300ms;
 }
 
-.saveBtn:not(:disabled):hover{
+.saveBtn:not(:disabled):hover {
     transform: scale(1.1);
 }
 
-.saveBtn:disabled{
+.saveBtn:disabled {
     background: gray;
     color: #303030;
     box-shadow: 0 0 15px 0 #202020ad, 0 0 15px 0 #505050ab;
     cursor: default;
+}
+
+@media (max-width: 600px) {
+    .cardContainer {
+        padding: 20px 0;
+    }
+
+    .card {
+        max-width: calc(100vw - 10px);
+        width: calc(100vw - 10px);
+    }
+
+    .cardTitle {
+        height: 10%;
+        margin: 15px 10px 0;
+    }
+
+    .cardTitle h2 {
+        font-size: 18px;
+    }
+
+    .card hr {
+        margin: 20px 0 20px;
+    }
+
+    .backBtn {
+        font-size: 14px;
+        box-shadow: 0 0 15px 0 #7f3382ad, 0 0 15px 0 #a9397aab;
+        padding: 5px 15px;
+    }
+
+    .backBtn:hover {
+        transform: scale(1.05);
+    }
+
+    .backBtn:hover svg {
+        transform: translateX(-10px)
+    }
+
+    .saveContainer {
+        width: 100%;
+    }
+
+    .saveBtn {
+        padding: 10px 80px;
+        font-size: 18px;
+    }
+
+    .saveBtn:not(:disabled):hover {
+        transform: scale(1.05);
+    }
 }

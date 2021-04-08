@@ -103,3 +103,66 @@
     width: 100px;
     height: 100px;
 }
+
+@media (max-width: 600px) {
+    .phCardContainer {
+        flex: 0 1 100%;
+        max-width: calc(100vw - 10px);
+        margin: 0 5px 20px;
+        min-height: 50vh;
+    }
+
+    .phCol {
+        padding: 30% 10px 0;
+        border-left: 2px solid rgba(255, 255, 255, .3);
+        justify-content: flex-start;
+    }
+
+    .phTitle h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .phBordered {
+        width: 100px;
+        height: 100px;
+    }
+
+    .aniBorder {
+        width: 100px;
+        height: 100px;
+    }
+
+    .phImgContainer1 img,
+    .phImgContainer2 img {
+        width: 90px;
+        height: 90px;
+        border: 6px solid white;
+        top: 56px;
+        left: 56px;
+        transform: translate(-50%, -50%);
+    }
+
+    .phImgContainer1 img {
+        border-color: #8E0876;
+    }
+
+    .phImgContainer2 img {
+        border-color: #A40862;
+    }
+
+
+    .relativeData {
+        position: absolute;
+        bottom: -50%;
+        left: 35%;
+        width: 50px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .middleCircle {
+        width: 60px;
+        height: 60px;
+    }
+}

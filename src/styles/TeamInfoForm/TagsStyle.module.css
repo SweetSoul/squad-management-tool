@@ -11,6 +11,7 @@
 .inputTag__tags li.inputTag__tags__input input.invInput{
     border: none;
     width: 100%;
+    background-color: transparent;
 }
 
 .inputTag__tags {
@@ -31,10 +32,10 @@
     list-style: none;
     margin-bottom: 5px;
     margin-right: 5px;
-    padding: 2px 5px;
+    padding: 0px 5px;
     border-radius: 30px;
-    min-height: 40px;
-    height: 40px;
+    min-height: 30px;
+    height: 30px;
     cursor: default;
 }
 
@@ -70,4 +71,3 @@
     flex-grow: 1;
     padding: 0;
 }
-

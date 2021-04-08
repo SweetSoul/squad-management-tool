@@ -1,4 +1,4 @@
-.table{
+.table {
     width: 100%;
     padding: 0 15px 0 15px;
     border-collapse: separate;
@@ -6,48 +6,49 @@
     color: #404040;
 }
 
-tr td:first-child { 
-    border-radius: 5px 0 0 5px;    
-}
-tr td:last-child { 
-    border-radius: 0 5px 5px 0;    
+tr td:first-child {
+    border-radius: 5px 0 0 5px;
 }
 
-tr:hover td{
+tr td:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+tr:hover td {
     background-color: #F7EEF7;
 }
 
 tbody:before {
-    content:'-';
-    display:block;
-    line-height:20px;
+    content: '-';
+    display: block;
+    line-height: 20px;
     font-size: 0;
 }
 
-tbody tr td{
-    border-bottom: 1px solid rgba(0,0,0,.1);
+tbody tr td {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 
-.tableHead{
+.tableHead {
     text-align: left;
     text-indent: 15px;
     height: 40px;
     margin-bottom: 20px;
 }
 
-.tableHead th:first-child{
-    border-right: 1px solid rgba(0,0,0,.1);
+.tableHead th:first-child {
+    border-right: 1px solid rgba(0, 0, 0, .1);
     max-width: 20%;
     overflow: hidden;
 }
 
-.tableHead button{
+.tableHead button {
     background: none;
     text-align: left;
     font-weight: 500;
     font-size: 16px;
-    border:none;
+    border: none;
     width: 100%;
     font-family: inherit;
     padding: 0;
@@ -58,7 +59,7 @@ tbody tr td{
     padding-left: 15px;
 }
 
-.tableHead button svg{
+.tableHead button svg {
     padding: 0;
     margin: 0;
     width: 10px;
@@ -67,60 +68,61 @@ tbody tr td{
     fill: #aaa;
 }
 
-.tableHead button div{
+.tableHead button div {
     display: flex;
     flex-flow: column;
     padding: 0;
     margin: 0;
 }
 
-.dataRow{
+.dataRow {
     overflow: hidden;
     border-radius: 10px;
     text-indent: 15px;
     height: 60px;
 }
 
-.dataRow:hover, .dataRow:hover div{
+.dataRow:hover,
+.dataRow:hover div {
     color: #B13D7C;
 }
 
-.dataRow td{
+.dataRow td {
     padding: 0;
     font-size: 16px;
     font-weight: 500;
 }
 
-.dataRow td:nth-child(1){
+.dataRow td:nth-child(1) {
     width: 20%;
 }
 
-.descContainer{
+.descContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-indent: 15px;
 }
 
-.btnList{
+.btnList {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:auto;
+    margin-left: auto;
 }
 
-.btnList button{
+.btnList button {
     background: none;
     border: none;
     display: none;
     padding: 1px 2px;
 }
 
-.dataRow:hover .btnList button{
+.dataRow:hover .btnList button {
     display: inline;
 }
 
-.btnList svg{
+.btnList svg {
     width: 15px;
     height: 15px;
 }
@@ -130,19 +132,21 @@ div[data-popover] {
     display: inline;
     position: relative;
 }
-div[data-popover] > button:focus {
+
+div[data-popover]>button:focus {
     outline: none;
 }
-div[data-popover] > button {
+
+div[data-popover]>button {
     list-style: none;
     cursor: pointer;
 }
 
-div[data-popover]:last-child > button {
+div[data-popover]:last-child>button {
     margin-right: 15px;
 }
 
-div[data-popover] > button:hover + * {
+div[data-popover]>button:hover+* {
     position: absolute;
     color: white;
     display: inline;
@@ -157,7 +161,7 @@ div[data-popover] > button:hover + * {
     font-weight: 600;
 }
 
-div[data-popover] > button:hover + *:before {
+div[data-popover]>button:hover+*:before {
     content: "";
     position: absolute;
     top: 100%;
@@ -168,16 +172,16 @@ div[data-popover] > button:hover + *:before {
     border-right: 5px solid transparent;
 }
 
-div[data-popover] > button + * > *{
+div[data-popover]>button+*>* {
     margin: 0;
 }
 
-div[data-popover] > * + * {
+div[data-popover]>*+* {
     /* hide detail elements that would ruin the popover */
     display: none;
 }
 
-div[data-popover] > button + * {
+div[data-popover]>button+* {
     bottom: calc(0.5rem + 100%);
     right: 50%;
     transform: translateX(50%);
@@ -185,43 +189,44 @@ div[data-popover] > button + * {
 
 
 /* Style sorting svgs from table Head */
-.tableHead .descending svg:last-child{
+.tableHead .descending svg:last-child {
     fill: #303030;
 }
 
-.tableHead  .ascending svg:first-child{
+.tableHead .ascending svg:first-child {
     fill: #303030;
 }
 
 
 /* TABLE FOOTER */
 
-tfoot tr:hover td{
+tfoot tr:hover td {
     background-color: white;
 }
 
-tfoot tr, tfoot tr td:last-child{
+tfoot tr,
+tfoot tr td:last-child {
     width: 100%;
     padding-top: 10px;
     padding-right: 5px;
 }
 
-.footerContainer{
+.footerContainer {
     width: 100%;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: flex-end;
 }
 
-.footerContainer button{
-    background-color: rgba(0,0,0,0);
+.footerContainer button {
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     height: 30px;
     width: 30px;
     border-radius: 100px;
 }
 
-.footerContainer>div>div{
+.footerContainer>div>div {
     width: 100px;
     height: 30px;
     display: flex;
@@ -229,7 +234,7 @@ tfoot tr, tfoot tr td:last-child{
 }
 
 .footerContainer button:nth-child(3) svg,
-.footerContainer button:nth-child(4) svg{
+.footerContainer button:nth-child(4) svg {
     width: 25px;
     height: 25px;
     padding: 5px 0;
@@ -237,25 +242,50 @@ tfoot tr, tfoot tr td:last-child{
 }
 
 .footerContainer button:nth-child(2) svg,
-.footerContainer button:last-child svg{
+.footerContainer button:last-child svg {
     width: 35px;
     height: 35px;
     fill: #505050;
 }
 
-.footerContainer button:hover{
+.footerContainer button:hover {
     cursor: pointer;
 }
 
-.footerContainer button:hover:not(:disabled) svg{
+.footerContainer button:hover:not(:disabled) svg {
     fill: #B13D7C;
 }
 
-.footerContainer button:disabled svg{
+.footerContainer button:disabled svg {
     fill: #ccc;
 }
 
-.footerContainer button:disabled{
-    cursor:default;
+.footerContainer button:disabled {
+    cursor: default;
 }
 
+@media (max-width: 600px) {
+    .dataRow td {
+        font-size: 14px;
+        text-indent: 10px;
+    }
+
+    .dataRow td:nth-child(1) {
+        min-width: 30%;
+        max-width: 30%;
+    }
+    .footerContainer>div>div {
+        height: 45px;
+    }
+    .footerContainer button:nth-child(3) svg,
+    .footerContainer button:nth-child(4) svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footerContainer button:nth-child(2) svg,
+    .footerContainer button:last-child svg {
+        width: 45px;
+        height: 45px;
+    }
+}

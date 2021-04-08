@@ -58,3 +58,20 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 600px){
+    .boardContainer{
+        flex: 1 1 100%;
+        margin: 5px 0 20px;
+        padding-bottom: 20px;
+    }
+
+    .titleRow{
+        height: 5vh;
+        margin: 20px 20px 0;
+    }
+
+    .boardContainer hr{
+        margin: 20px 0;
+    }
+}

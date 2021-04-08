@@ -377,3 +377,44 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 600px) {
+    .colsContainer {
+        width: 100vw;
+        flex-wrap: wrap;
+    }
+    .col {
+        flex: 1 1 100%;
+    }
+    .formationSelect {
+        justify-content: center;
+    }
+
+    .fieldContainer{
+        max-width: calc(100vw - 10px);
+        width: calc(100vw - 30px);
+        margin: 0 5px 30px;
+        height: 75vh;
+    }
+
+    .playerPosition > div{
+        height: 70px;
+        width: 70px;
+        font-size: 25px;
+    }
+    .labelSearch {
+        width: 95%;
+        font-size: 16px;
+    }
+    
+    .labelSearch input {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+
+    .playerCardContainer{
+        margin-top: 10px;
+        width: 95%;
+    }
+}
