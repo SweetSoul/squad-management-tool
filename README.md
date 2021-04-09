@@ -7,10 +7,12 @@
 <img src='https://img.shields.io/github/license/sweetsoul/squad-management-tool' align='center'>
 <img src='https://img.shields.io/tokei/lines/github/sweetsoul/squad-management-tool' align='center'>
 </p>
-<p align='center'>
-👉 <img src='https://img.shields.io/badge/Demo-online-brightgreen' href='https://squad-management-tool-ochre.vercel.app/'> 👈
-</p>
 
+👉 [![Demo Badge](https://img.shields.io/badge/Demo-online-brightgreen)](https://squad-management-tool-ochre.vercel.app/) 👈
+
+
+
+https://squad-management-tool-ochre.vercel.app/
 ## 1. <b>Technologies used</b>
 
 This application was made using only the mostly needed technology within the application. Above is a descriptive list of everything used.
