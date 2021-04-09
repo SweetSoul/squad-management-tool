@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
+import styles from '../../styles/TeamInfoForm/TagsStyle.module.css'
 
-export default function InputTag({ styles, tags, setTags }) {
-    // Using the State hook to declare our tags variable and setTags to update the variable.
+export default function InputTag({ tags, setTags }) {
     const [inputValue, setInputValue] = useState('')
     const tagRef = useRef(null)
 
@@ -52,15 +52,16 @@ export default function InputTag({ styles, tags, setTags }) {
         <div className={styles.inputTag} onClick={() => tagRef.current.focus()}>
             <ul className={styles.inputTag__tags}>
                 {tags.map((tag, i) => (
-                    <li key={tag}>
+                    <li key={tag} id={tag + 'li'}>
                         {tag}
-                        <button type="button" onClick={() => { removeTag(i) }}>+</button>
+                        <button id={tag + 'btn'} type="button" onClick={() => { removeTag(i) }}>+</button>
                     </li>
                 ))}
                 <li className={styles.inputTag__tags__input}>
                     <input type="textarea" 
                     className={styles.invInput}
                     ref={tagRef}
+                    placeholder='Insert team tags here'
                     onKeyDown={handleKeyDown} 
                     value={inputValue} 
                     onChange={handleChange} 

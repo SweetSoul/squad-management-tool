@@ -37,7 +37,7 @@ export default function TeamsBoard() {
 
             {(teamStore.length < 1)
                 ? <div className={styles.loader}>Loading... </div>
-                : <SortingTable teams={teamStore} />
+                : <SortingTable />
             }
 
         </div>

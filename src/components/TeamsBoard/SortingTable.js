@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
 import styles from '../../styles/TeamsBoard/SortingTable.module.css'
 import TablePaginationActions from '../../utils/Pagination'
 import { useSortableData } from '../../utils/TableSorting'
-import { removeTeam } from '../../features/teamStore/teamStoreSlice'
+import { removeTeam, selectTeams } from '../../features/teamStore/teamStoreSlice'
 
 
-export default function SortingTable({ teams }) {
+export default function SortingTable() {
+    const teams = useSelector(selectTeams)
     const { items, requestSort, sortConfig } = useSortableData(teams)
     const [page, setPage] = useState(0);
     let history = useHistory();
@@ -42,7 +43,7 @@ export default function SortingTable({ teams }) {
     };
 
     return (
-        <table className={styles.table}>
+        <table data-testid="SortingTable" className={styles.table}>
             <thead className={styles.tableHead}>
                 <tr>
                     <th>

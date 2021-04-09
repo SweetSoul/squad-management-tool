@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styledInput from '../../styles/TeamInfoForm/TagsStyle.module.css'
+
 import InputTag from './InputTags'
 import styles from '../../styles/TeamInfoForm/TeamInformationSection.module.css'
 
@@ -128,7 +128,7 @@ export default function TeamInformationSection(props) {
 
                         <label className={styles.tagifyContainer}>
                             <h6>Tags</h6>
-                            <InputTag styles={styledInput} tags={tags} setTags={setTags} />
+                            <InputTag tags={tags} setTags={setTags} />
                         </label>
                     </div>
                 </div>
